@@ -1,0 +1,42 @@
+@ApiDoga_HostAddress = http://localhost:5117
+
+GET {{ApiDoga_HostAddress}}/Orders/
+Accept: application/json
+
+###
+GET {{ApiDoga_HostAddress}}/Orders/100
+Accept: application/json
+
+###
+
+DELETE {{ApiDoga_HostAddress}}/Orders/4
+Accept: application/json
+
+###
+
+
+POST {{ApiDoga_HostAddress}}/Orders/
+Content-Type: application/json
+Accept: application/json
+{
+  "productName": "Fehér liliom",
+    "productType": 0,
+    "quantity": 3,
+    "price": 890
+}
+###
+
+PUT {{ApiDoga_HostAddress}}/Orders/
+Content-Type: application/json
+Accept: application/json
+{
+  "id": 100,
+  "productName": "Fehér liliom 2",
+    "productType": 0,
+    "quantity": 3,
+    "price": 890
+}
+
+###
+GET {{ApiDoga_HostAddress}}/Orders/MostSold
+Accept: application/json
